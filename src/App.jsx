@@ -2,25 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import products from './data'
+import productList from './data'
 
 function App() {
-  console.log(products)
-  // add state in here
 
-  // handleChange function
+  console.log(productList); 
+//update the return of App.js
 
-// handleSubmit
-
-
-
-  // return
-  return (
-
-    <div>
-      <h1> Hi there! </h1>
-    </div>
-  )
-}
-
+return ( 
+  <div> 
+  <h1> Hi there! </h1> 
+  <ul> {productList.map(item => <li>{item.itemName}</li>)} 
+  </ul> 
+  </div> 
+)}
 export default App;
